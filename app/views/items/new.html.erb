@@ -36,12 +36,14 @@
                             <%= form.label :Min_allowed_stock %><br>
                             <%= form.text_field :min_allowed_stock %>                       
                         </p>
+                        <p>
+                            <%= form.label :Category %><br>
+                            <%= form.collection_select(:category_id, Category.all, :id, :name) %>
+                        </p>
+
                         <div class="field">
-                        <%= form.label :Images %><br>
-                            <%= form.label :Images do %>
-                                <%= form.file_field :images, multiple: true %>
-                                 
-                            <% end %>
+                            <%= form.label :Images %><br>
+                            <%= form.file_field :images, multiple: true %>
                         </div>
                         <br>
                         <br>

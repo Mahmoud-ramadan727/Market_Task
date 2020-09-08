@@ -1,24 +1,8 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ 
+- ERD is done and will be attached with the email.
+- Authentication is done with `devise gem`.
+- Authorization is done with `cancancan gem` and applied on `categories_controller` only.
+- Functionalities regarding `Category` is done {add, list}.
+- list functionality for `Item` is done.
+- add, update functionality for `Item` is not working 
