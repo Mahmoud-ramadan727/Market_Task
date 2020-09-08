@@ -1,0 +1,43 @@
+<div class="container">
+        <%= link_to 'Add New Item', new_item_path %>
+        <br>
+        <br>
+        <table class="table table-bordered">
+            </thead>
+                <tr>
+                    
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>In-Stock Quantity</th>
+                    <th>Images</th>
+                    <th>Brand</th>
+                    <th>Exp_date</th>
+                    <th>Min_allowed_stock</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <% @items.each do |item| %>
+                <tbody>
+                    <tr>
+                        
+                        <td><%= item.description %></td>
+                        <td><%= item.price %>$</td>
+                        <td><%= item.stock %></td>
+                        <td><img id="images" src="<%= item.images %>"></td>
+                        <td> <%= item.brand %></td>
+                        <td> <%= item.exp_date %></td>
+                        <td> <%= item.min_allowed_stock %></td>
+                        <td><%= link_to 'Show', item_path(item) %></td>
+                    </tr>
+                </tbody>
+            <% end %>
+        </table>
+</div>
+<style>
+    img{
+        border-radius: 8px;
+        border-radius: 4px;
+        padding: 5px;
+        width: 90px;
+    }
+</style>

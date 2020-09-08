@@ -1,0 +1,58 @@
+<section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 m-auto">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <%= form_with scope: :item, url: items_path, html: { multipart: true } ,local: true do |form| %>
+
+                        
+                    
+                        <p>
+                            <%= form.label :Item_Price %><br>
+                            <%= form.text_field :price %>
+                        </p>
+                        <p>
+                            <%= form.label :Item_Stock_Quantity %><br>
+                            <%= form.text_field :stock %>
+                        </p>
+                      
+                        <p>
+                            <%= form.label :Brand %><br>
+                            <%= form.text_field :brand %>                       
+                        </p>
+
+                        <p>
+                            <%= form.label :Item_Description %><br>
+                            <%= form.text_area :description %>
+                        </p>
+
+                        <p>
+                            <%= form.label :Exp_date %><br>
+                            <%= form.text_field :exp_date %>                       
+                        </p>
+
+                        <p>
+                            <%= form.label :Min_allowed_stock %><br>
+                            <%= form.text_field :min_allowed_stock %>                       
+                        </p>
+                        <div class="field">
+                        <%= form.label :Images %><br>
+                            <%= form.label :Images do %>
+                                <%= form.file_field :images, multiple: true %>
+                                 
+                            <% end %>
+                        </div>
+                        <br>
+                        <br>
+                   
+                        <p>
+                             <%= form.submit %>
+                        </p>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

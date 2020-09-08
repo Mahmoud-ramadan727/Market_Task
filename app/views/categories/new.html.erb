@@ -1,0 +1,17 @@
+
+<%=form_with scope: :category, url: categories_path, local: true do |form| %>
+    <p>
+      <%= form.label :Name %><br>
+      <%= form.text_field :name %>
+    </p>
+   
+    <div class="field">
+    <%= form.label :Parent_Category %><br />
+    <%= form.collection_select( :category_id,  Category.all, :id, lambda{|i| i.name}) %>
+    </div>
+
+   
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>

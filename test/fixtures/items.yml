@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1
+  stock: 1
+  brand: MyString
+  description: MyText
+  exp_date: 2020-09-08
+  min_allowed_stock: 1
+
+two:
+  price: 1
+  stock: 1
+  brand: MyString
+  description: MyText
+  exp_date: 2020-09-08
+  min_allowed_stock: 1
